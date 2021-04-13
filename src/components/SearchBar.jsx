@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import "../styles/SearchBar.css";
 import SearchIcon from '@material-ui/icons/Search';
 import { UrlContext } from "../UrlContext";
+import env from "react-dotenv";
+
 
 // context api
 
@@ -17,7 +19,7 @@ function SearchBar() {
 
     const handleKeyPress = (event) => {
         if (event.key === "Enter") {
-            setUrl(`https://newsapi.org/v2/everything?q=${input}&apiKey=af7f385e6e7f44528612e10359c472ef`);
+            setUrl(`https://newsapi.org/v2/everything?q=${input}&apiKey=${env.API_KEY}`);
         }
     }
 

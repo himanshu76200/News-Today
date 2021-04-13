@@ -3,20 +3,6 @@ import axios from "axios";
 import "../styles/News.css";
 import { UrlContext } from "../UrlContext";
 
-// const url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=af7f385e6e7f44528612e10359c472ef"
-
-// let config = {
-//     headers: {
-//         "x-bingapis-sdk": true,
-//         "x-rapidapi-key": "9dc3c28d57msh7e0e551d314dbb6p140b53jsn095d899c2dd9",
-//         "x-rapidapi-host": "bing-news-search1.p.rapidapi.com"
-//     },
-//     params: {
-//         "safeSearch": "off",
-//         "textFormat": "Raw"
-//     }
-// };
-
 function News() {
     const [news, setNews] = useState([]);
     const [url, setUrl] = useContext(UrlContext);
