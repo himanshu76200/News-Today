@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from "axios";
 import "../styles/News.css";
+import { UrlContext } from "../UrlContext";
 
-const url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=af7f385e6e7f44528612e10359c472ef"
+// const url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=af7f385e6e7f44528612e10359c472ef"
 
 // let config = {
 //     headers: {
@@ -18,6 +19,7 @@ const url = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=af7f38
 
 function News() {
     const [news, setNews] = useState([]);
+    const [url, setUrl] = useContext(UrlContext);
 
     useEffect(() => {
 
@@ -32,7 +34,7 @@ function News() {
 
         fetchData();
 
-    }, [])
+    }, [url])
 
     useEffect(() => {
         console.log(news)
@@ -63,7 +65,7 @@ function News() {
 
                         <div className="news__description">
                             <p>{newsItem.description}</p>
-                            <p>{newsItem.content} <a href={newsItem.url}>Read more</a></p>
+                            <p>{newsItem.content} <a href={newsItem.url} target="_blank" rel="noreferrer">Read more</a></p>
                         </div>
 
                     </div>

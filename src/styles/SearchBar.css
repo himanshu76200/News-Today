@@ -1,0 +1,22 @@
+.searchBar {
+    display: flex;
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    padding: 10px;
+    align-items: center;
+    min-width: 70px;
+    border: 1px solid black;
+    width: 70%;
+    margin:auto;   
+}
+
+.searchBar > input {
+    border: none;
+    width: 100%;
+    font-size:16pt;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
