@@ -5,6 +5,9 @@
     font-weight: 600;
 }
 
+.banner:hover {
+    cursor: pointer;
+}
 /* .banner__heading {
     justify-content:space-between;
 } */

@@ -16,10 +16,10 @@ function SearchBar() {
         setInput(event.target.value);
     }
 
-
     const handleKeyPress = (event) => {
         if (event.key === "Enter") {
             setUrl(`https://newsapi.org/v2/everything?q=${input}&apiKey=${env.API_KEY}`);
+            setInput("");
         }
     }
 
@@ -29,6 +29,7 @@ function SearchBar() {
             <input
                 placeholder="search for News, Articles or Topics"
                 type="text"
+                value={input}
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
             />

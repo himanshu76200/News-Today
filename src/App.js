@@ -8,8 +8,8 @@ import { UrlProvider } from "./UrlContext";
 function App() {
   return (
     <div className="app">
-      <Banner />
       <UrlProvider>
+        <Banner />
         <SearchBar />
         <News />
       </UrlProvider>
